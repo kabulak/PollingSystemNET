@@ -39,9 +39,9 @@
             this.cmbPolls = new System.Windows.Forms.ComboBox();
             this.grpChoices = new System.Windows.Forms.GroupBox();
             this.btnVote = new System.Windows.Forms.Button();
-            this.lblResult = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblResults = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,7 +144,7 @@
             // 
             this.grpChoices.Location = new System.Drawing.Point(588, 100);
             this.grpChoices.Name = "grpChoices";
-            this.grpChoices.Size = new System.Drawing.Size(200, 100);
+            this.grpChoices.Size = new System.Drawing.Size(200, 175);
             this.grpChoices.TabIndex = 9;
             this.grpChoices.TabStop = false;
             // 
@@ -154,24 +154,13 @@
             this.btnVote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVote.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnVote.ForeColor = System.Drawing.Color.White;
-            this.btnVote.Location = new System.Drawing.Point(644, 206);
+            this.btnVote.Location = new System.Drawing.Point(644, 284);
             this.btnVote.Name = "btnVote";
             this.btnVote.Size = new System.Drawing.Size(95, 33);
             this.btnVote.TabIndex = 10;
             this.btnVote.Text = "Vote";
             this.btnVote.UseVisualStyleBackColor = false;
             this.btnVote.Click += new System.EventHandler(this.btnVote_Click);
-            // 
-            // lblResult
-            // 
-            this.lblResult.AutoSize = true;
-            this.lblResult.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblResult.Location = new System.Drawing.Point(385, 100);
-            this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(52, 19);
-            this.lblResult.TabIndex = 11;
-            this.lblResult.Text = "Results";
-            this.lblResult.Click += new System.EventHandler(this.lblResult_Click);
             // 
             // panel1
             // 
@@ -195,14 +184,25 @@
             this.label1.Text = "Polling System";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // lblResults
+            // 
+            this.lblResults.AutoSize = true;
+            this.lblResults.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblResults.Location = new System.Drawing.Point(375, 107);
+            this.lblResults.Name = "lblResults";
+            this.lblResults.Size = new System.Drawing.Size(52, 19);
+            this.lblResults.TabIndex = 13;
+            this.lblResults.Text = "Results";
+            this.lblResults.Click += new System.EventHandler(this.lblResults_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 347);
+            this.Controls.Add(this.lblResults);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblResult);
             this.Controls.Add(this.btnVote);
             this.Controls.Add(this.grpChoices);
             this.Controls.Add(this.cmbPolls);
@@ -238,9 +238,9 @@
         private System.Windows.Forms.ComboBox cmbPolls;
         private System.Windows.Forms.GroupBox grpChoices;
         private System.Windows.Forms.Button btnVote;
-        private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblResults;
     }
 }
 

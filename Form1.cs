@@ -51,7 +51,10 @@ namespace PollingSystem
                 txtPollQuestion.Clear();
                 lstChoices.Items.Clear();
             }
-        }
+
+            }
+
+
 
         private void cmbPolls_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -93,19 +96,30 @@ namespace PollingSystem
             }
         }
 
-        private void lblResult_Click(object sender, EventArgs e)
-        {
-            int selectedIndex = cmbPolls.SelectedIndex;
-            if (selectedIndex >= 0)
-            {
-                Poll selectedPoll = PollManager.Polls[selectedIndex];
-                lblResult.Text = selectedPoll.GetResults();
-            }
-        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+
+        
+    
+
+
+       
+
+        private void lblResults_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = cmbPolls.SelectedIndex;
+            if (selectedIndex >= 0)
+            {
+                Poll selectedPoll = PollManager.Polls[selectedIndex];
+                lblResults.Text = selectedPoll.GetResults();
+            }
+        }
     }
-}
+    }
+    
+    
+
